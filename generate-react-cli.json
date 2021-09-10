@@ -10,7 +10,7 @@
       },
       "path": "src/components",
       "withStyle": false,
-      "withTest": true,
+      "withTest": false,
       "withStory": false,
       "withLazy": false
     },
@@ -20,7 +20,7 @@
       },
       "path": "src/screens/pages",
       "withStyle": false,
-      "withTest": true,
+      "withTest": false,
       "withStory": false,
       "withLazy": false
     },
@@ -30,7 +30,7 @@
       },
       "path": "src/screens/auth",
       "withStyle": false,
-      "withTest": true,
+      "withTest": false,
       "withStory": false,
       "withLazy": false
     }
