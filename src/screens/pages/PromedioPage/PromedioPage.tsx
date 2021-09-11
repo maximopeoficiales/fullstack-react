@@ -23,10 +23,12 @@ const PromedioPage = (props: MyProps) => {
             </>
           ) : (
             <>
-              <h1>Promedio de Edades de los Clients: {res?.averageAge}</h1>
+              <h1 className="my-4">
+                Average age of customers: <b>{res?.averageAge}</b> years old
+              </h1>
               <img
                 className="rounded"
-                width="600"
+                width="100%"
                 height="400"
                 src={
                   (res?.averageAge ?? 0) >= 18
