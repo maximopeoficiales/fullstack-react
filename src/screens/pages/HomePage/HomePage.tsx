@@ -21,7 +21,9 @@ const HomePage = (props: MyProps) => {
     try {
       let newClient = await clientApi.create(client);
       refreshData();
-      toast(`New Customer ${newClient.name} ${newClient.lastname}`);
+      toast(`New Customer ${newClient.name} ${newClient.lastname}`, {
+        type: "success",
+      });
     } catch (error) {
       toast(`Error: ${error}`, {
         type: "error",
