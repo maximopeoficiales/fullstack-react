@@ -63,6 +63,7 @@
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
     "enzyme-to-json": "^3.6.2",
     "generate-react-cli": "^7.0.4",
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "readme-md-generator": "^1.0.0"
   }
 }
