@@ -9,8 +9,7 @@ const PromedioPage = (props: MyProps) => {
   props = { ...defaultProps, ...props };
   const {} = props;
   const { error, loading, res } = useAsync<DashboardData>(
-    clientApi.getDataDashboard(),
-    []
+    clientApi.getDataDashboard
   );
 
   return (

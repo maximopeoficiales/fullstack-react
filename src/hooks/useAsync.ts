@@ -1,24 +1,25 @@
 import { useEffect, useState } from "react";
 
-export const useAsync = <T>(fn: any, deps: any[]) => {
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<Error | undefined>();
-    const [res, setRes] = useState<T | undefined>();
-    useEffect(() => {
-        setLoading(true);
-        // let cancel = false;
-        fn().then((res: any) => {
-            console.log(res);
+export const useAsync = <T>(funtion: any) => {
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<any>();
+    const [res, setRes] = useState<T>();
+    const [refresh, setRefresh] = useState(false);
 
-            setLoading(false);
-            setRes(res)
-        }, (error: any) => {
-            setLoading(false);
-            setError(error);
-        })
-        // return () => {
-        //     cancel = true;
-        // }
-    }, deps)
-    return { loading, error, res };
+    const refreshData = () => {
+        setRefresh(!refresh);
+        setLoading(true);
+    };
+    useEffect(() => {
+        (async () => {
+            try {
+                let data = await funtion();
+                setLoading(false);
+                setRes(data);
+            } catch (error: any) {
+                setError("Error en el Servidor 500");
+            }
+        })();
+    }, [refresh]);
+    return { loading, res, error, refreshData }
 }

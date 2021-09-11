@@ -3,8 +3,8 @@ import { DashboardData } from "../../../api/entitys/dashboard.entity";
 import Spinner from "../../../components/ui/Spinner/Spinner";
 import CardColor from "../../../components/ui/CardColor/CardColor";
 import { CardColors } from "../../../components/ui/CardColor/types/CardColors";
-import { useAsync } from "../../../hooks/useAsync";
 import ChartVerticalBar from "../../../components/ChartVerticalBar/ChartVerticalBar";
+import { useAsync } from "../../../hooks/useAsync";
 
 interface MyProps {}
 const defaultProps = {};
@@ -13,8 +13,7 @@ const DashboardPage = (props: MyProps) => {
   const {} = props;
 
   const { error, loading, res } = useAsync<DashboardData>(
-    clientApi.getDataDashboard(),
-    []
+    clientApi.getDataDashboard
   );
   return (
     <div data-testid="DashboardPage" className="fadein">
