@@ -58,7 +58,7 @@ const HomePage = (props: MyProps) => {
             </>
           ) : (
             <>
-              <h2 className="mx-2">List of Customers</h2>
+              <h2 className="my-2">List of Customers</h2>
               <DataTableClients data={res ?? []} />
               {/* <ClientsTable data={res ?? []} /> */}
             </>
