@@ -1,5 +1,5 @@
 {
-  "homepage": "https://maximopeoficiales.github.io/react-web-reto-full-stack",
+  "homepage": "https://maximopeoficiales.github.io/fullstack-react",
   "name": "react-app",
   "version": "1.0.0",
   "private": false,
@@ -13,7 +13,6 @@
     "@types/react-dom": "^17.0.0",
     "axios": "^0.21.4",
     "bootstrap": "^5.1.1",
-    "chart.js": "^3.5.1",
     "formik": "^2.2.9",
     "react": "^17.0.2",
     "react-chartjs-2": "^3.0.4",
