@@ -39,6 +39,9 @@ const HomePage = (props: MyProps) => {
         <div className="col-md-4">
           <div className="card">
             <div className="card-body">
+              <div className="card-title">
+                <h3>Create Customer</h3>
+              </div>
               <FormClient saveClient={saveClient} />
             </div>
           </div>

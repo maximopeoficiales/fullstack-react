@@ -1,4 +1,5 @@
 import { UpdateClientDto } from "../../api/dto/update-client.dto";
+import { getAgeByDate } from "../../utils/utils";
 
 interface MyProps {
   data: UpdateClientDto[];
@@ -21,7 +22,7 @@ const ClientsTable = (props: MyProps) => {
               <tr key={client.id}>
                 <td>{client.name}</td>
                 <td>{client.lastname}</td>
-                <td>{client.dateBirthday}</td>
+                <td>{getAgeByDate(new Date(client.dateBirthday))}</td>
               </tr>
             ))}
           </tbody>

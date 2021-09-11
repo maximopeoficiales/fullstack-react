@@ -32,8 +32,10 @@ const FormClient = (props: MyProps) => {
     <div data-testid="FormClient" className="">
       <form action="" onSubmit={handleSubmit}>
         <div className="my-2">
-          <div className="form-group">
-            <label html-for="name">Name:</label>
+          <div className="form-group my-2 text-left">
+            <label html-for="name" className="text-left">
+              Name:
+            </label>
             <input
               id="name"
               onChange={handleChange}
@@ -47,7 +49,7 @@ const FormClient = (props: MyProps) => {
           </div>
           <HelpText visible={showErrors(errors.name)}>{errors.name}</HelpText>
 
-          <div className="form-group">
+          <div className="form-group my-2 text-left">
             <label html-for="lastname">Lastname:</label>
             <input
               id="lastname"
@@ -63,7 +65,7 @@ const FormClient = (props: MyProps) => {
             {errors.lastname}
           </HelpText>
 
-          <div className="form-group">
+          <div className="form-group my-2 text-left">
             <label html-for="dateBirthday">Date Birthday:</label>
             <input
               id="dateBirthday"

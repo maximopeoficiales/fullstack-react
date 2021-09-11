@@ -58,3 +58,10 @@
     opacity: 1;
   }
 }
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
