@@ -6,6 +6,7 @@ import FormClient from "../../../components/FormClient/FormClient";
 import { useAsync } from "../../../hooks/useAsync";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Spinner from "../../../components/Spinner/Spinner";
 
 interface MyProps {}
 const defaultProps = {};
@@ -45,7 +46,10 @@ const HomePage = (props: MyProps) => {
 
         <div className="col-md-8">
           {loading ? (
-            <h1>Cargando Clientes.....</h1>
+            <>
+              <h1>Cargando Clientes.....</h1>
+              <Spinner />
+            </>
           ) : (
             <>
               <h2>List of Customers</h2>

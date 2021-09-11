@@ -7,7 +7,7 @@ const Navbar = (props: MyProps) => {
   const {} = props;
   return (
     <nav className=" navbar navbar-expand-lg navbar-dark bg-primary">
-      <NavLink activeClassName="" to="/" className="px-3 py-2 navbar-brand">
+      <NavLink activeClassName="active" to="/" className="px-3 py-2 navbar-brand">
         React Full Stack
       </NavLink>
       <button
@@ -25,18 +25,18 @@ const Navbar = (props: MyProps) => {
         <ul className="navbar-nav">
           <li className="nav-item">
             <NavLink
-              activeClassName=""
+              activeClassName="active"
               to="/averageAge"
-              className="px-3 py-2 text-decoration-none"
+              className="px-3 py-2 nav-link"
             >
               Average Age
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink
-              activeClassName=""
+              activeClassName="active"
               to="/dashboard"
-              className="px-3 py-2 text-decoration-none"
+              className="px-3 py-2 nav-link"
             >
               Dashboard
             </NavLink>
