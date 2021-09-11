@@ -6,7 +6,7 @@ import FormClient from "../../../components/FormClient/FormClient";
 import { useAsync } from "../../../hooks/useAsync";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Spinner from "../../../components/Spinner/Spinner";
+import Spinner from "../../../components/ui/Spinner/Spinner";
 
 interface MyProps {}
 const defaultProps = {};

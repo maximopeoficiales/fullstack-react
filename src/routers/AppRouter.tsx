@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
 } from "react-router-dom";
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../components/ui/Navbar/Navbar";
 import DashboardPage from "../screens/pages/DashboardPage/DashboardPage";
 import HomePage from "../screens/pages/HomePage/HomePage";
 import PromedioPage from "../screens/pages/PromedioPage/PromedioPage";

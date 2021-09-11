@@ -1,6 +1,6 @@
 import { clientApi } from "../../../api/ClientApi";
 import { DashboardData } from "../../../api/entitys/dashboard.entity";
-import Spinner from "../../../components/Spinner/Spinner";
+import Spinner from "../../../components/ui/Spinner/Spinner";
 import { useAsync } from "../../../hooks/useAsync";
 
 interface MyProps {}

@@ -3,7 +3,7 @@ import { CreateClientDto } from "../../api/dto/create-client.dto";
 import { Client } from "../../api/entitys/client.entity";
 import { createClientSchema } from "../../api/validations/client.validation";
 import { showErrors } from "../../utils/utils";
-import HelpText from "../HelpText/HelpText";
+import HelpText from "../ui/HelpText/HelpText";
 
 interface MyProps {
   saveClient(client: CreateClientDto): void;
