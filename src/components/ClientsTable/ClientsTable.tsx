@@ -5,7 +5,8 @@ interface MyProps {
   data: UpdateClientDto[];
 }
 const ClientsTable = (props: MyProps) => {
-  const { data } = props;
+  let { data } = props;
+  
   return (
     <div data-testid="ClientsTable" className="">
       {data.length > 0 ? (

@@ -11,5 +11,8 @@ export const formatDate = (dateIn: Date): string => {
 
 export const getAgeByDate = (date: Date): string => {
     let yearCurrent = new Date().getFullYear();
+    if (yearCurrent < date.getFullYear()) {
+        return "0";
+    }
     return (yearCurrent - date.getFullYear()).toString();
 }

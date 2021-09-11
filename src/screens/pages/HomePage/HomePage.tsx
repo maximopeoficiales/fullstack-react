@@ -7,6 +7,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Spinner from "../../../components/ui/Spinner/Spinner";
 import { useAsync } from "../../../hooks/useAsync";
+import DataTableClients from "../../../components/DataTableClients/DataTableClients";
+import { getAgeByDate } from "../../../utils/utils";
 
 interface MyProps {}
 const defaultProps = {};
@@ -57,7 +59,8 @@ const HomePage = (props: MyProps) => {
           ) : (
             <>
               <h2>List of Customers</h2>
-              <ClientsTable data={res ?? []} />
+              <DataTableClients data={res ?? []} />
+              {/* <ClientsTable data={res ?? []} /> */}
             </>
           )}
           {error && <h2>Ocurrio un error: {error}</h2>}
