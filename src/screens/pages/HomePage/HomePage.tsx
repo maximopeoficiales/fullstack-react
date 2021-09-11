@@ -7,6 +7,7 @@ import { useAsync } from "../../../hooks/useAsync";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Spinner from "../../../components/ui/Spinner/Spinner";
+import { useEffect, useState } from "react";
 
 interface MyProps {}
 const defaultProps = {};
@@ -14,14 +15,26 @@ const HomePage = (props: MyProps) => {
   props = { ...defaultProps, ...props };
   const {} = props;
 
-  const { error, loading, res } = useAsync<UpdateClientDto[]>(
-    clientApi.getAll(),
-    []
-  );
+  const [loading, setLoading] = useState(true);
+  const [res, setRes] = useState<UpdateClientDto[]>([]);
+  const [refresh, setRefresh] = useState(false);
+
+  const refreshData = () => {
+    setRefresh(!refresh);
+    setLoading(true);
+  };
+  useEffect(() => {
+    (async () => {
+      let clients = await clientApi.getAll();
+      setLoading(false);
+      setRes(clients);
+    })();
+  }, [refresh]);
 
   const saveClient = async (client: CreateClientDto) => {
     try {
       let newClient = await clientApi.create(client);
+      refreshData();
       toast(`New Customer ${newClient.name} ${newClient.lastname}`);
     } catch (error) {
       toast(`Error: ${error}`, {
@@ -59,7 +72,7 @@ const HomePage = (props: MyProps) => {
               <ClientsTable data={res ?? []} />
             </>
           )}
-          {error && <h2>Ocurrio un error: {error}</h2>}
+          {/* {error && <h2>Ocurrio un error: {error}</h2>} */}
         </div>
       </div>
     </div>

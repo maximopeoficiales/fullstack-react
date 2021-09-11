@@ -10,7 +10,9 @@ class ClientApi {
     }
 
     async getAll(): Promise<UpdateClientDto[]> {
+        
         let response = await axios.get(this.urlClients);
+        console.log("me ejecuto");
         return (response.data) as UpdateClientDto[];
     }
 
